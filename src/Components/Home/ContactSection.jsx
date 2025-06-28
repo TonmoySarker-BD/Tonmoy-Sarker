@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import emailjs from 'emailjs-com';
-import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
 const ContactSection = () => {
