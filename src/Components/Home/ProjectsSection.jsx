@@ -7,7 +7,7 @@ const projectsData = [
     {
         title: "🌿 Greenhaven ( A Online community For Garden Enthusiasts )",
         description: "Green Haven is a vibrant online community and resource hub designed for gardening enthusiasts. Whether you're passionate about composting, hydroponics, balcony gardens, or seasonal planting, this platform empowers users to share knowledge, participate in events, and connect with fellow gardeners.",
-        tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+        tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS" , "DaisyUI", "Firebase"],
         image: "https://i.postimg.cc/pd7QKNZT/greenhaven.png",
         github: "https://github.com/TonmoySarker-BD/Greenhaven",
         demo: "https://greenhavenus.web.app/"
