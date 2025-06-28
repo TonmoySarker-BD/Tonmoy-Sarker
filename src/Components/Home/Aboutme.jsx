@@ -66,7 +66,7 @@ const Aboutme = () => {
                         className="flex justify-center"
                     >
                         <div className="relative w-full max-w-md">
-                            <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl opacity-20 blur-xl"></div>
+                            <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl opacity-50 blur-xl"></div>
                             <div className="relative bg-gray-800 rounded-2xl overflow-hidden aspect-square border-2 border-gray-700">
                                 <img
                                     src="/tonmoysarker.jpg" // Replace with your image
