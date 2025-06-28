@@ -1,7 +1,7 @@
 
 # Tonmoy Sarker - Portfolio Website
 
-![Portfolio Preview](https://i.postimg.cc/8zQJvW1k/portfolio-preview.png)
+![Portfolio Preview](https://i.postimg.cc/bvf8QVZp/portfolio.png)
 
 A modern, responsive portfolio website built with React, Tailwind CSS, and Framer Motion, showcasing my skills, projects, education, and contact information.
 
