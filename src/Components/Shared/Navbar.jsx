@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaMoon, FaSun, FaDownload } from 'react-icons/fa';
-import { Link } from 'react-router';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
     const [activeSection, setActiveSection] = useState('home');
@@ -93,21 +93,26 @@ const Navbar = () => {
         </>
     );
 
-    // Resume download function
-    const handleDownloadResume = () => {
-        // Replace with your actual resume file path
-        const resumeUrl = '/path/to/your/resume.pdf';
+    const handleDownloadResume = async () => {
+
+        // Using absolute path from public folder
+        const resumeUrl = '/Resume-Of-Tonmoy-Sarker.pdf';
         const link = document.createElement('a');
         link.href = resumeUrl;
         link.download = 'TonmoySarker_Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+
+        // Alternatively, you can use window.open to open the PDF in a new tab
+        window.open(resumeUrl, '_blank');
+
     };
 
     return (
-        <div className="bg-gray-900 text-gray-100">
-            <div className="navbar  mx-auto">
+        <div className="bg-gray-900 relative text-gray-100">
+            <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl opacity-30 blur-xl"></div>
+            <div className="navbar z-10 max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -119,23 +124,26 @@ const Navbar = () => {
                             {menus}
                         </ul>
                     </div>
+
                     <button
                         onClick={() => scrollToSection('home')}
-                        className="btn btn-ghost font-bold text-xl bg-gradient-to-r from-pink-500 to-violet-600 bg-clip-text text-transparent"
+                        className="font-bold text-xl bg-gradient-to-r z-10 from-pink-500 to-violet-600 bg-clip-text text-transparent"
                     >
-                        Tonmoy Sarker
+                        <img src={logo} alt="Tonmoy Sarker" className='w-16' />
+                         
                     </button>
+
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-1">
+                    <ul className="menu menu-horizontal px-1 text-xl gap-1">
                         {menus}
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
 
                     <button
-                        onClick={handleDownloadResume}
-                        className="btn bg-gradient-to-r from-pink-500 to-violet-600 text-white border-none hover:opacity-90"
+                        onClick={() => handleDownloadResume()}
+                        className="btn z-10 bg-gradient-to-r from-pink-500 to-violet-600 text-white border-none hover:opacity-90"
                     >
                         <FaDownload className="mr-2" />
                         Resume
