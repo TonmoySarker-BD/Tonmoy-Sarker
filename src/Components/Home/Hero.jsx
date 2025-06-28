@@ -2,8 +2,37 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React from "react";
 import TonmoySarker from "../../assets/Tonmoy Sarker.jpg";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 const Hero = () => {
+
+    const socialLinks = [
+        {
+            name: "LinkedIn",
+            url: "https://www.linkedin.com/in/tonmoysarkerbd/",
+            icon: <FaLinkedin className="w-8 h-8" />,
+            color: "hover:text-[#0A66C2]"
+        },
+        {
+            name: "GitHub",
+            url: "https://github.com/tonmoysarker-bd",
+            icon: <FaGithub className="w-8 h-8" />,
+            color: "hover:text-[#4078c0]"
+        },
+        {
+            name: "Gmail",
+            url: "mailto:tonmoycsebd@gmail.com",
+            icon: <BiLogoGmail className="w-8 h-8" />,
+            color: "hover:text-[#EA4335]"
+        },
+        // {
+        //     name: "WhatsApp",
+        //     url: "https://wa.me/yourphonenumber",
+        //     icon: <FaWhatsapp className="w-5 h-5" />,
+        //     color: "hover:text-[#25D366]"
+        // }
+    ];
 
 
     // Scroll to section function
@@ -64,7 +93,7 @@ const Hero = () => {
         <section
             id="home"
             ref={ref}
-            className=" flex items-center justify-center px-4 sm:px-6 lg:px-8 py-10 md:py-32 bg-gray-900 text-gray-100"
+            className=" flex items-center justify-center px-4 sm:px-6 lg:px-8 py-10 md:py-10 bg-gray-900 text-gray-100"
         >
             <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row  gap-24 items-center">
                 {/* Left Side - Text Content */}
@@ -93,6 +122,40 @@ const Hero = () => {
                         user-centered design and clean code.
                     </motion.p>
 
+
+
+
+                    {/* Social Links */}
+                    <motion.div
+                        className="flex gap-10 mt-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6, duration: 0.5 }}
+                    >
+                        {socialLinks.map((link, index) => (
+                            <motion.a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`text-gray-400 ${link.color} transition-colors duration-300`}
+                                whileHover={{
+                                    y: -3,
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 }
+                                }}
+                                aria-label={link.name}
+                            >
+                                <div className="flex items-center gap-2">
+                                    {link.icon}
+                                    <span className="hidden sm:inline-block">{link.name}</span>
+                                </div>
+                            </motion.a>
+                        ))}
+                    </motion.div>
+
+
+                    {/* Action Buttons */}
                     <motion.div
                         variants={buttonVariants}
                         className="flex flex-wrap gap-4 pt-4"
