@@ -111,7 +111,7 @@ const Navbar = () => {
 
     return (
         <div className="bg-gray-900 relative text-gray-100">
-            <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl opacity-30 blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-violet-600 rounded-2xl opacity-30 blur-xl"></div>
             <div className="navbar z-10 max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
