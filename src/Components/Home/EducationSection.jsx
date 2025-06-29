@@ -46,7 +46,7 @@ const EducationSection = () => {
     <section
       id="education"
       ref={ref}
-      className="py-20 px-4 sm:px-6 lg:px-8"
+      className="py-20 px-4 bg-gray-900 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}

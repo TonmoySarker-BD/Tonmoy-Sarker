@@ -22,7 +22,7 @@ const Footer = () => {
         },
         {
             name: "Email",
-            url: "mailto:tonmoysarker.bd@gmail.com",
+            url: "mailto:tonmoycsebd@gmail.com",
             icon: <FaEnvelope className="text-xl" />,
         },
     ];
