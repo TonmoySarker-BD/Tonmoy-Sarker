@@ -96,8 +96,9 @@ const ProjectCard = ({ project, reverseLayout = false }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className={`mb-20 md:mb-8 last:mb-0 ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+            className={`mb-20 last:mb-0 ${reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row'}`}
         >
+            
             {/* Mobile Layout with auto-scroll */}
             <div className="md:hidden bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all duration-300">
                 <div
@@ -119,7 +120,7 @@ const ProjectCard = ({ project, reverseLayout = false }) => {
             </div>
 
             {/* Desktop Layout with auto-scroll */}
-            <div className="hidden md:flex gap-2 border-2 p-5 rounded-2xl items-center">
+            <div className="hidden bg-gradient-to-r from-indigo-500/50 to-purple-600 md:flex gap-2 border-2 p-5 rounded-2xl items-center">
                 <motion.div
                     className={`flex-1 ${reverseLayout ? 'order-2' : 'order-1'}`}
                     whileHover={{ scale: 1.02 }}
@@ -222,6 +223,7 @@ const ProjectsSection = () => {
                             index={index}
                             reverseLayout={index % 2 === 0} // Alternate layout for even items
                         />
+                        
                     ))}
                 </div>
             </div>

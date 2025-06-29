@@ -4,6 +4,7 @@ import React from "react";
 import TonmoySarker from "../../assets/Tonmoy Sarker.jpg";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
 
@@ -111,10 +112,32 @@ const Hero = () => {
                     </motion.h1>
 
                     <motion.h2 className="text-2xl sm:text-3xl text-gray-300">
-                        <span className="bg-gradient-to-r from-pink-500 to-violet-600 bg-clip-text text-transparent">
-                            FullStack Web Developer
-                        </span>{" "}
-                        based in <br /> Bogura, Bangladesh
+                        <TypeAnimation
+                            sequence={[
+                                'FullStack Web Developer',
+                                1000,
+                                'React Specialist',
+                                1000,
+                                'Express.js Developer',
+                                1000,
+                                'Node.js Developer',
+                                1000,
+                                'MERN Stack Engineer',
+                                1000
+                            ]}
+                            wrapper="span"
+                            cursor={true}
+                            repeat={Infinity}
+                            style={{
+                                display: 'inline-block',
+                                background: 'linear-gradient(to right, #ec4899, #8b5cf6)',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent'
+                            }}
+                        />
+                        <br />
+                        based in Bogura, Bangladesh
                     </motion.h2>
 
                     <motion.p className="text-lg text-gray-400 max-w-lg">
@@ -170,6 +193,7 @@ const Hero = () => {
                         </motion.button>
 
                         <motion.button
+                            onClick={() => scrollToSection('contact')}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="px-8 py-3 rounded-lg border border-gray-600 text-gray-300 font-medium hover:bg-gray-800 transition-colors"

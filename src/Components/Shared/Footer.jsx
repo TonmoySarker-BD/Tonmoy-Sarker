@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaArrowUp, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaArrowUp, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -9,21 +9,25 @@ const Footer = () => {
             name: "GitHub",
             url: "https://github.com/tonmoysarker-bd",
             icon: <FaGithub className="text-xl" />,
+            rel: "me noopener noreferrer"
         },
         {
             name: "LinkedIn",
             url: "https://linkedin.com/in/tonmoysarkerbd",
             icon: <FaLinkedin className="text-xl" />,
+            rel: "me noopener noreferrer"
         },
         {
             name: "WhatsApp",
             url: "https://wa.me/+8801701521921",
-            icon: <FaWhatsapp className="text-xl" />
+            icon: <FaWhatsapp className="text-xl" />,
+            rel: "me noopener noreferrer"
         },
         {
-            name: "Email",
-            url: "mailto:tonmoycsebd@gmail.com",
-            icon: <FaEnvelope className="text-xl" />,
+            name: "Facebook",
+            url: "https://facebook.com/tonmoysarkerbd",
+            icon: <FaFacebook className="text-xl" />,
+            rel: "me noopener noreferrer"
         },
     ];
 
@@ -52,7 +56,7 @@ const Footer = () => {
                                     key={index}
                                     href={link.url}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel={link.rel}
                                     whileHover={{ y: -3 }}
                                     className="text-gray-400 hover:text-purple-400 transition-colors"
                                     aria-label={link.name}

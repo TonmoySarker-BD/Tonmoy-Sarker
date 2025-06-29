@@ -39,9 +39,10 @@ const SkillsSection = () => {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
                         My <span className="bg-gradient-to-r from-pink-500 to-violet-600 bg-clip-text text-transparent">Skills</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-violet-600 mx-auto"></div>
+                    {/* <p className="text-gray-400 max-w-2xl mx-auto">
                         Technologies I've worked with and my proficiency level in each
-                    </p>
+                    </p> */}
                 </motion.div>
 
                 {/* Skills Grid */}
@@ -62,7 +63,7 @@ const SkillsSection = () => {
 
 
                                 {/* Outer circular border */}
-                                <div className={`w-24 h-24 rounded-full p-1 bg-gradient-to-br from-pink-500 to-violet-600 group-hover:from-pink-400 transition-all duration-300`}>
+                                <div className={`w-24 h-24 rounded-full p-1 bg-gradient-to-r from-indigo-500/50 to-purple-600 border group-hover:from-pink-400 transition-all duration-300`}>
                                     {/* Inner circle container */}
                                     <div className="w-full h-full rounded-full flex items-center justify-center p-4">
                                         {/* Skill icon with color */}
@@ -112,15 +113,15 @@ const SkillsSection = () => {
                     ].map((category, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all"
+                            className="bg-gradient-to-r from-indigo-500/50 to-purple-600 rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all"
                         >
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="p-3 bg-gray-700 rounded-lg text-purple-400">
+                                <div className="p-3 bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg text-white shadow-lg">
                                     {category.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-white">{category.title}</h3>
                             </div>
-                            <p className="text-gray-400">{category.skills}</p>
+                            <p className="text-white">{category.skills}</p>
                         </div>
                     ))}
                 </motion.div>

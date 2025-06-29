@@ -62,7 +62,8 @@ const EducationSection = () => {
             </span>{" "}
             Journey
           </h2>
-          <p className="text-gray-400 mt-2">Where I’ve studied and what I’ve learned</p>
+          <div className="w-20 h-1 mt-2 bg-gradient-to-r from-pink-500 to-violet-600 mx-auto"></div>
+          {/* <p className="text-gray-400 mt-2">Where I’ve studied and what I’ve learned</p> */}
         </motion.div>
 
         {/* Cards */}
@@ -74,7 +75,7 @@ const EducationSection = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={cardVariants}
-              className="relative bg-gray-900 border border-gray-700 rounded-2xl overflow-hidden p-6 shadow-lg hover:shadow-purple-800/20 transition-all"
+              className="relative bg-gradient-to-r from-indigo-500/50 to-purple-600 border border-gray-700 rounded-2xl overflow-hidden p-6 shadow-lg hover:shadow-purple-800/20 transition-all"
             >
               {/* Icon Badge */}
               <div className=" left-6 w-12 h-12 bg-purple-600 text-white flex items-center justify-center rounded-full shadow-md text-xl">

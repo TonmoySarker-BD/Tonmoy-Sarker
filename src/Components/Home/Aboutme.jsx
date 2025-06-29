@@ -7,6 +7,17 @@ const Aboutme = () => {
         threshold: 0.2,
     });
 
+    // Scroll to section function
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -170,7 +181,7 @@ const Aboutme = () => {
                             className="flex gap-4 pt-6"
                         >
                             <motion.a
-                                href="#contact"
+                                onClick={() => scrollToSection('contact')}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-6 py-3 rounded-lg bg-gradient-to-r from-pink-500 to-violet-600 text-white font-medium"
@@ -178,7 +189,7 @@ const Aboutme = () => {
                                 Contact Me
                             </motion.a>
                             <motion.a
-                                href="#projects"
+                                onClick={() => scrollToSection('projects')}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-6 py-3 rounded-lg border border-gray-600 text-gray-300 font-medium hover:bg-gray-800 transition-colors"
